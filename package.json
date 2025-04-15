@@ -1,0 +1,35 @@
+{
+  "name": "wasd.ai",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@anon-aadhaar/react": "^2.4.2",
+    "@emotion/react": "^11.13.5",
+    "@emotion/styled": "^11.13.5",
+    "@mui/material": "^6.1.10",
+    "@mui/styled-engine-sc": "^6.1.10",
+    "@semaphore-protocol/identity": "^4.7.1",
+    "axios": "^1.7.9",
+    "convai-chatui-sdk": "^0.0.5",
+    "dotenv": "^16.4.7",
+    "ethers": "^6.13.4",
+    "google-auth-library": "^9.15.0",
+    "next": "15.0.4",
+    "okto-sdk-react": "^0.1.6",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "styled-components": "^6.1.13"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "typescript": "^5"
+  }
+}

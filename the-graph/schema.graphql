@@ -1,0 +1,27 @@
+type VoteCast @entity(immutable: true) {
+  id: Bytes!
+  voter: Bytes! # address
+  power: Int! # uint8
+  vote: Boolean! # bool
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type VotingStarted @entity(immutable: true) {
+  id: Bytes!
+  WeightedVoting_id: BigInt! # uint256
+  startTime: BigInt! # uint256
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type VotingStopped @entity(immutable: true) {
+  id: Bytes!
+  WeightedVoting_id: BigInt! # uint256
+  endTime: BigInt! # uint256
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}

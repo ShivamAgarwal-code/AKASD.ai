@@ -1,0 +1,32 @@
+specVersion: 1.0.0
+indexerHints:
+  prune: auto
+schema:
+  file: ./schema.graphql
+dataSources:
+  - kind: ethereum
+    name: WeightedVoting
+    network: polygon-amoy
+    source:
+      address: "0xA8F3e695Bac46BFA9F1C64750dD73D55d334311b"
+      abi: WeightedVoting
+      startBlock: 15330539
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.7
+      language: wasm/assemblyscript
+      entities:
+        - VoteCast
+        - VotingStarted
+        - VotingStopped
+      abis:
+        - name: WeightedVoting
+          file: ./abis/WeightedVoting.json
+      eventHandlers:
+        - event: VoteCast(address,uint8,bool)
+          handler: handleVoteCast
+        - event: VotingStarted(uint256,uint256)
+          handler: handleVotingStarted
+        - event: VotingStopped(uint256,uint256)
+          handler: handleVotingStopped
+      file: ./src/weighted-voting.ts
