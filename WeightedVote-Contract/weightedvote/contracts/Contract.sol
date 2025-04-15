@@ -9,6 +9,7 @@ contract WeightedVoting {
         bool isActive;      // Whether the voting is currently active
         uint256 yesCount;   // Weighted "yes" votes
         uint256 noCount;    // Weighted "no" votes
+        uint256 address;
         uint256 totalVotes; // Total votes cast (weighted)
         uint256 startTime;  // Timestamp when voting started
         uint256 endTime;    // Timestamp when voting ended
@@ -49,6 +50,7 @@ contract WeightedVoting {
             yesCount: 0,
             noCount: 0,
             totalVotes: 0,
+            totalCount: 0,
             startTime: block.timestamp,
             endTime: 0
         });
