@@ -11,6 +11,7 @@ export function handleVoteCast(event: VoteCastEvent): void {
   )
   entity.voter = event.params.voter
   entity.power = event.params.power
+  entity.call = entity.params.call
   entity.vote = event.params.vote
 
   entity.blockNumber = event.block.number
@@ -26,7 +27,7 @@ export function handleVotingStarted(event: VotingStartedEvent): void {
   )
   entity.WeightedVoting_id = event.params.id
   entity.startTime = event.params.startTime
-
+  entity.endTime = event.params.endTime
   entity.blockNumber = event.block.number
   entity.blockTimestamp = event.block.timestamp
   entity.transactionHash = event.transaction.hash
